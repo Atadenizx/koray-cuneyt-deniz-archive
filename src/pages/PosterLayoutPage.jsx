@@ -11,11 +11,7 @@ function PosterLayoutPage() {
 
   console.log(categoryValue);
 
-  const {
-    data: Posters,
-    isLoading,
-    error,
-  } = useQuery({
+  const { data: Posters, isLoading } = useQuery({
     queryKey: ["Posters"],
     queryFn: getPosters,
   });

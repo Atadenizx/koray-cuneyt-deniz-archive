@@ -8,11 +8,7 @@ import { useNavigate } from "react-router-dom";
 function HomePage() {
   const navigate = useNavigate();
 
-  const {
-    data: Posters,
-    isLoading,
-    error,
-  } = useQuery({
+  const { data: Posters } = useQuery({
     queryKey: ["Posters"],
     queryFn: getPosters,
   });
